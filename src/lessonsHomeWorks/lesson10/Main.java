@@ -2,26 +2,18 @@ package lessonsHomeWorks.lesson10;
 
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle();
-        circle.setName("Circle");
-        circle.setRadios(20);
 
-        double circleLength1 = circle.figureLength(20);
-        System.out.println(circleLength1);
+        Circle circle = new Circle(6.5);
+        System.out.printf("При радиусе равном %s, длина окружности круга = %s, a его площадь = %s \n", circle.getRadius(), circle.circleLength(), circle.circleArea());
 
-        double cirleArea1=circle.circleArea(20);
-        System.out.println(cirleArea1);
+        Ellipse ellipse=new Ellipse(7,6); // в методах double явно приведен к int
+        System.out.printf("При величине полуосей R = %s и r = %s, длина окружности эллипса = %s, a ее площадь = %s \n", ellipse.getSemiAxisR(), ellipse.getSemiAxisr(), ellipse.ellipseLength(), ellipse.ellipseArea());
 
+        Square square = new Square(5);
+        System.out.printf("При сторное равной %s, периметр квадарата = %s, a его площадь = %s \n", square.getSide(), square.squarePerimeter(), square.squareArea());
 
-        Ellipse ellipse=new Ellipse();
-        ellipse.setName("Ellipse");
-        ellipse.setSemiAxis(10);
-
-        double ellipselengh1 = ellipse.ellipseLength(10,20);
-        System.out.println(ellipselengh1);
-
-        double ellipseArea1 = ellipse.ellipseArea(10,20);
-        System.out.println(ellipseArea1);
+        Rectangle rectangle =new Rectangle(4,5);
+        System.out.printf("При сторное A = %s, и стороне В = %s, периметр прямоугольника = %s, a его площадь = %s \n", rectangle.getSide1(), rectangle.getSide2(),rectangle.perimeter(),rectangle.area());
 
     }
 }

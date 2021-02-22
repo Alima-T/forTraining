@@ -1,36 +1,40 @@
 package lessonsHomeWorks.lesson10;
 
 public class Ellipse {
-    private String name;
-    private int semiAxis;
+    private double semiAxisR;
+    private double semiAxisr;
 
-
-    public void setName(String name) {
-        this.name = name;
+    public Ellipse(double semiAxisA, double semiAxisB) {
+        this.semiAxisR = semiAxisA;
+        this.semiAxisr = semiAxisB;
     }
 
-    public void setSemiAxis(int semiAxis) {
-        this.semiAxis = semiAxis;
+    public void setSemiAxisR(double semiAxisR) {
+        this.semiAxisR = semiAxisR;
     }
 
-    public String getName() {
-        return name;
+    public double getSemiAxisR() {
+        return semiAxisR;
     }
 
-    public int getSemiAxis() {
-        return semiAxis;
-
+    public void setSemiAxisr(double semiAxisr) {
+        this.semiAxisr = semiAxisr;
     }
 
-    public double ellipseLength(int semiAxis1, int semiAxis2) {
-        double L = (int) (Math.PI * (semiAxis1 + semiAxis2));
-        return L;
+    public double getSemiAxisr() {
+        return semiAxisr;
     }
 
-    public double ellipseArea(int semiAxis1, int semiAxis2) {
-        double S =  Math.PI * semiAxis1 * semiAxis2;
-        return S;
+    public double ellipseArea() {
+        int ellipseArea = (int) (Math.PI * semiAxisR * semiAxisr);
+        return ellipseArea;
     }
+
+        public double ellipseLength() {
+        int ellipseLength = (int) (Math.PI * (semiAxisR + semiAxisr));
+        return ellipseLength;
+    }
+
 }
 
 

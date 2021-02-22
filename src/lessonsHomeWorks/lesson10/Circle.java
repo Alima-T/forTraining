@@ -1,29 +1,33 @@
 package lessonsHomeWorks.lesson10;
 
 public class Circle {
-    private String name;
-    private int radios;
+    private double radius;
 
-    public void setName(String name) {
-        this.name = name;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
-    public void setRadios(int radios) {
-        this.radios = radios;
+
+    public void setRadius() {
+        this.radius = radius;
     }
 
-    public double figureLength(int radios) {
-        double L = 2 * Math.PI * radios;
-        return L;
+    public double getRadius() {
+        return radius;
+    }
+
+    public double circleLength() {
+        double circlelength = 2 * Math.PI * radius;
+        return circlelength;
 
     }
 
-    public double circleArea(int radios) {
-        double S = Math.PI * pow(radios);
-        return S;
+    public double circleArea() {
+        double area = Math.PI * pow(radius); // или (Math.PI * Math.pow(radius,2))
+        return area;
     }
 
-    public int pow(int value) {
+    public double pow(double value) {
         return value * value;
 
     }
