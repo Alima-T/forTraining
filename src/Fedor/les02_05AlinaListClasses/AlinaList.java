@@ -49,12 +49,6 @@ public class AlinaList implements IList {
     @Override
     public int size() {
         int size = list.length;
-        for (int i = 0; i < list.length; i++) {
-            //boolean // list[i] > 0 -  расписать подробно
-            if (list[i] > 0) {
-                size = size + 1;
-            }
-        }
         return size;
     }
 
