@@ -24,17 +24,19 @@ public class AlinaList implements IList {
     long[] list = new long[0];
 
     @Override
-    public void add(long value) {
-        list = new long[list.length + 1];
-        list[list.length - 1] = value;
+//    public void add(long value) {
+//        list = new long[list.length + 1];
+//        list[list.length - 1] = value;
 
+//    }
+    public void add(long value) { // + void add(long value) - добавляет в список текущего экземпляра (объекта) новое значение value
+        long[] newList = new long[list.length + 1]; //
+        for (int i = 0; i < list.length; i = i + 1) {
+            newList[i] = list[i];
+        }
+        newList[newList.length - 1] = value;
+        list = newList;
     }
-//    public void add(long value) { // + void add(long value) - добавляет в список текущего экземпляра (объекта) новое значение value
-//        long[] newList = new long[list.length + 1]; //
-//        for (int i = 0; i < list.length; i = i + 1) {
-//            newList[i] = list[i];
-//            newList[list.length - 1] = value;
-//            list[i] = newList[i];
 
     @Override
     public long get(int index) {
