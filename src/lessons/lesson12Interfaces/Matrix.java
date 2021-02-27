@@ -84,6 +84,9 @@ public class Matrix implements IMatrix{
 
     @Override
     public void printToConsole() {
+        System.out.println(numbers[getRows()][getColumns()]);
+        }
+
 
     }
-}
+

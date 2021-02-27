@@ -29,7 +29,7 @@ public interface FractionNumberOperation {
 	FractionNumber sub (FractionNumber a, FractionNumber b) throws NullPointerException;
 	
 	/**
-	 * Умнодение двух чисел FractionNumber
+	 * Умножение двух чисел FractionNumber
 	 * 
 	 * @param a первый множитель
 	 * @param b второй множитель

@@ -1,4 +1,4 @@
-package javaFedor.tests;
+package Fedor.les02_20Casting;
 
 public class VarsCastingTest {
 

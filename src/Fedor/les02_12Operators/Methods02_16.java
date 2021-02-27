@@ -1,4 +1,4 @@
-package Fedor.tests;
+package Fedor.les02_12Operators;
 
 public class Methods02_16 {
     /*K.alinka

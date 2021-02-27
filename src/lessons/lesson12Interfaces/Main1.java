@@ -9,13 +9,13 @@ public class Main1 {
         matrix.setValueAt(0,0,2);
         matrix.setValueAt(0,1,1);
 
-        matrix.setValueAt(0,2,1);
-        matrix.setValueAt(1,0,3);
+        matrix.setValueAt(1,0,1);
+        matrix.setValueAt(1,1,3);
 
-        matrix.setValueAt(1,1,5);
-        matrix.setValueAt(1,2,6);
+        matrix.setValueAt(2,0,5);
+        matrix.setValueAt(2,1,6);
 
-        System.out.println(matrix.getValueAt(0,0));
+        System.out.println(matrix.getValueAt(1,0));
 
 
 

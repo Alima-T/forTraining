@@ -2,7 +2,7 @@ package lessons.lesson2;
 
 public class Switch {
     public static void main(String[] args) {
-        int mark = 4;
+        int mark = 5;
 
         switch (mark) {
             case 1:

@@ -10,8 +10,19 @@ public class Main {
         System.out.println(drob1.toString());
 
         CalculatorDrob calculator = new CalculatorDrob();
+
         FractionNumber resultAdd = calculator.add(drob1, drob2);
         System.out.println((resultAdd));
+
+        FractionNumber resultSub = calculator.sub(drob1,drob2);
+        System.out.println(resultSub);
+
+        FractionNumber resultMul = calculator.mul(drob1, drob2);
+        System.out.println((resultMul));
+
+        FractionNumber resultDiv = calculator.div(drob1,drob2);
+        System.out.println(resultDiv);
+
 
     }
 }

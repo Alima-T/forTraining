@@ -1,4 +1,4 @@
-package Fedor.tests;
+package Fedor.les02_12Operators;
 
 public class Test02_16 {
     public static void main(String[] args) {

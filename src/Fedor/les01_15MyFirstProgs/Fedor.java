@@ -3,7 +3,7 @@ package Fedor.les01_15MyFirstProgs;
 import java.util.Scanner;
 
 public class Fedor {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         System.out.println("Здрасьте, как Вас зовут?");
 
         final Scanner scanner1 = new Scanner(System.in);

@@ -19,16 +19,36 @@ public class CalculatorDrob implements FractionNumberOperation {
 
     @Override
     public FractionNumber sub(FractionNumber a, FractionNumber b) throws NullPointerException {
-        return null;
+
+        int resultDivisor = a.getDivisor() * b.getDivisor();
+        int resultDividend = a.getDividend() * b.getDivisor() - b.getDividend() * a.getDivisor();
+
+        FractionNumberImpl result = new FractionNumberImpl();
+        result.setDivisor(resultDivisor);
+        result.setDividend(resultDividend);
+        return result;
     }
 
     @Override
     public FractionNumber mul(FractionNumber a, FractionNumber b) throws NullPointerException {
-        return null;
+        int resultDivisor = a.getDivisor() * b.getDivisor();
+        int resultDividend = a.getDividend() * b.getDividend();
+
+        FractionNumberImpl result = new FractionNumberImpl();
+        result.setDivisor(resultDivisor);
+        result.setDividend(resultDividend);
+        return result;
     }
 
     @Override
     public FractionNumber div(FractionNumber a, FractionNumber b) throws NullPointerException, ArithmeticException {
-        return null;
+        int resultDivisor = a.getDivisor() * b.getDividend();
+        int resultDividend = a.getDividend() * b.getDivisor();
+
+        FractionNumberImpl result = new FractionNumberImpl();
+        result.setDivisor(resultDivisor);
+        result.setDividend(resultDividend);
+        return result;
+
     }
 }

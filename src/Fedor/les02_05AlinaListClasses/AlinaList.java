@@ -1,6 +1,6 @@
 package Fedor.les02_05AlinaListClasses;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 
 /**
@@ -25,12 +25,16 @@ public class AlinaList implements IList {
 
     @Override
     public void add(long value) {
-        for (long array : list) { // - foreach это разновидность цикла for, которая используется, когда нужно обработать все элементы массива (каждый) или коллекции.
-            list = new long[list.length + (int) value]; // нужно не 1 а value
-            System.out.println(array);
-            break;
-        }
+        list = new long[list.length + 1];
+        list[list.length - 1] = value;
+
     }
+//    public void add(long value) { // + void add(long value) - добавляет в список текущего экземпляра (объекта) новое значение value
+//        long[] newList = new long[list.length + 1]; //
+//        for (int i = 0; i < list.length; i = i + 1) {
+//            newList[i] = list[i];
+//            newList[list.length - 1] = value;
+//            list[i] = newList[i];
 
     @Override
     public long get(int index) {
@@ -44,7 +48,7 @@ public class AlinaList implements IList {
 
     @Override
     public int size() {
-        int size = 0;
+        int size = list.length;
         for (int i = 0; i < list.length; i++) {
             //boolean // list[i] > 0 -  расписать подробно
             if (list[i] > 0) {
@@ -56,7 +60,7 @@ public class AlinaList implements IList {
 
     @Override
     public void clear() {
-        for (long array:list) {
+        for (long array : list) {
             list = new long[0];
         }
     }
@@ -73,15 +77,8 @@ public class AlinaList implements IList {
 
     // TDD - Test Driven Development
     public static void main(String[] args) {
-        final MyClass myClassInstance = new MyClass();
-        myClassInstance.put(50, 574875);
-        System.out.println(myClassInstance.get(50));
-
-        extracted();
-    }
-
-    private static void extracted() {
         final IList list1 = new AlinaList();
+        // assertTrue - проверка верности выражения
         assertTrue(list1.size() == 0);
         list1.add(13);
         list1.add(16);
@@ -96,30 +93,14 @@ public class AlinaList implements IList {
         assertTrue(list1.get(3) == 13);
         list1.clear();
         assertTrue(list1.size() == 0);
+        list1.add(0);
+        assertTrue(list1.size() == 1);
         try {
-            list1.get(0);
+            list1.get(1);
             throw new RuntimeException("Предполагается исключение IndexOutOfBoundsException!");
         } catch (IndexOutOfBoundsException ex) {
         }
     }
 
 }
-
-class MyClass {
-    // класс выделяет область в памяти 1 байт (byte b) + 4 байта (int a) + 8 байтов (для массива,т.к. переменная массива хранит ссылку на этот массив, а все ссылки хранятся в типе long, т.е. 8 байтов)
-    byte b;
-    int a;
-    private long [] array = new long[10];
-
-    public void put(int index, long valueToPut){
-        array[index] = valueToPut;
-    }
-
-    public long get(int index){
-        long element = array[index];
-        return element;
-    }
-
-}
-
 

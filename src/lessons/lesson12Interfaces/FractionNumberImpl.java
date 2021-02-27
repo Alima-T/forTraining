@@ -1,14 +1,12 @@
 package lessons.lesson12Interfaces;
 
-import java.util.Objects;
-
 public class FractionNumberImpl implements FractionNumber {
     private int dividend;
     private int divisor;
 
     public FractionNumberImpl(int dividend, int divisor) {
         this.dividend = dividend;
-        this.dividend = divisor;
+        this.divisor = divisor;
 
     }
 
@@ -46,21 +44,26 @@ public class FractionNumberImpl implements FractionNumber {
 
     @Override
     public String toString() {
-        return this.dividend + "/" + this.divisor;
+        return this.dividend + "/" + this.divisor; //переопределен под нас, было super.toString, где super - это обращение к род. классу: родительский класс, вызови нам toString
 
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof FractionNumberImpl)) return false;
+
         FractionNumberImpl that = (FractionNumberImpl) o;
-        return dividend == that.dividend && divisor == that.divisor;
+
+        if (getDividend() != that.getDividend()) return false;
+        return getDivisor() == that.getDivisor();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(dividend, divisor);
+        int result = getDividend();
+        result = 31 * result + getDivisor();
+        return result;
     }
 }
 
