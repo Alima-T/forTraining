@@ -3,7 +3,7 @@ package lessons.lesson13;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Main {
+public class ArrayList02_25 {
     public static void main(String[] args) {
         ArrayList<String> texts = new ArrayList<>(); // переписывает всю коллекцию в новую коллекцию если нужно сдвинуть или увеличить размер.
         texts.add("qqq"); // добавить

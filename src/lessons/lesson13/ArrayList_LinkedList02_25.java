@@ -3,7 +3,7 @@ package lessons.lesson13;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class Main1 {
+public class ArrayList_LinkedList02_25 {
     public static void main(String[] args) {
         ArrayList<String> arraylist = new ArrayList<>();
         LinkedList<String> linkedList = new LinkedList<>();

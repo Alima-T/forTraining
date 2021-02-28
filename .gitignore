@@ -1,6 +1,7 @@
 target/
 .mvn/
 .idea/
+out/
 
 *.iml
 pom.xml.tag

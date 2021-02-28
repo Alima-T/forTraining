@@ -1,10 +1,9 @@
 package lessons.lesson13;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 
-public class Main2 {
+public class ArrayListSet02_25 {
     public static void main(String[] args) {
         ArrayList<Integer> set = new ArrayList<>();
         set.add(23); //
@@ -17,13 +16,19 @@ public class Main2 {
         System.out.println(set); // выводит только уникальные номера (одинаковые элементы выводит только один  раз, нет порядка
         // вхождения, нет индекса
 
+        System.out.println();
+
         //1 способ прохода по коллекции - генерируя индексы
         for (int i = 0; i < set.size(); i++) {
             System.out.println(set.get(i));
-        }
+
+        }System.out.println();
+
         for (Integer num : set) {
             System.out.println(num);
-        }
+
+        } System.out.println();
+
         //  с помощью итератора
         for(Iterator<Integer> iter= set.iterator(); iter.hasNext();){
             System.out.println(iter.next());
