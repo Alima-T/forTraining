@@ -1,4 +1,4 @@
-package lessons.lesson13;
+package lessons.lesson14;
 
 import java.util.Collection;
 import java.util.Set;
@@ -20,6 +20,7 @@ public interface CollectionUtils {
 	 * @throws NullPointerException если a или b == null
 	 */
 	Collection<Integer> union (Collection<Integer> a, Collection<Integer> b) throws NullPointerException;
+
 	
 	/**
 	 * Пересечение двух коллекций с дубликатами
