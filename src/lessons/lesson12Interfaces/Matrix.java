@@ -64,6 +64,8 @@ public class Matrix implements IMatrix{
 
     @Override
     public double determinant() { // очень сложный
+
+
         return 0;
     }
 

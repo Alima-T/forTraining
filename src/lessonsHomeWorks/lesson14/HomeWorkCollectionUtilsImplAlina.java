@@ -1,12 +1,14 @@
-package lessons.lesson14;
+package lessonsHomeWorks.lesson14;
 
+
+import lessons.lesson14.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public class CollectionUtilsImpl implements CollectionUtils {
+public class HomeWorkCollectionUtilsImplAlina implements CollectionUtils {
 
 
     @Override
@@ -90,10 +92,10 @@ public class CollectionUtilsImpl implements CollectionUtils {
         nums2.add(5);
         nums2.add(6);
 
-        CollectionUtilsImpl utils = new CollectionUtilsImpl(); //поскольку метод union в класссе CollectionUtilsImpl НЕ static, мы создаем объект этого класса,
+        HomeWorkCollectionUtilsImplAlina utils = new HomeWorkCollectionUtilsImplAlina(); //поскольку метод union в класссе CollectionUtilsImpl НЕ static, мы создаем объект этого класса,
         // если бы был static , то можно было бы сразу к нему обращаться без создания объекта
-        Collection<Integer> result = utils.union(nums1, nums2); //смотрим что возвращает метод union (возвращает тип Collection<Integer>) и прописываем его перед переменной result
-        System.out.println(result);
+        Collection<Integer> result1 = utils.union(nums1, nums2); //смотрим что возвращает метод union (возвращает тип Collection<Integer>) и прописываем его перед переменной result
+        System.out.println(result1);
 
         Collection<Integer> result2 = utils.intersection(nums1, nums2);
         System.out.println(result2);

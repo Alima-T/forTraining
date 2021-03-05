@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class ArrayListSet02_25 {
     public static void main(String[] args) {
-        ArrayList<Integer> set = new ArrayList<>();
+        ArrayList<Integer> set = new ArrayList<>(); //ArrayList <> - in generics put reference type (not primitive), here is <Integer>
         set.add(23); //
         set.add(13);
         set.add(22);
