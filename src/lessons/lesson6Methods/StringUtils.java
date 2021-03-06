@@ -48,6 +48,24 @@ public class StringUtils {
             System.out.println(str + ": " + test);
 
         } return (true);
+
+    }
+    public static int countWords (String text){
+        String[] words =  text.split(" ");
+        return words.length;
+    }
+
+    public static void fileExtension (String path) {
+        if (path.endsWith("png")||path.endsWith("jpg")||path.endsWith("jpeg")){
+            System.out.println("Это картинка");
+        }
+        else if (path.endsWith("muvi")|| path.endsWith("mp4")){
+            System.out.println("Это аудиозапись");
+        }
+        else if (path.endsWith("exe")){
+            System.out.println("Это программа");
+        }
+        else System.out.println("Это какой-то файл");
     }
 }
 
