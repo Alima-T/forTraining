@@ -1,4 +1,4 @@
-package lessonsHomeWorks.lesson15;
+package lessons.lesson15;
 
 public class StringUtilsImpl implements StringUtils {
 
