@@ -1,4 +1,4 @@
-package lessons.lesson15;
+package lessons.lesson15Exceptions;
 
 public class Person {
     private String name;

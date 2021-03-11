@@ -1,4 +1,4 @@
-package lessons.lesson14;
+package lessons.lesson14Collection;
 
 import java.util.Collection;
 import java.util.Set;

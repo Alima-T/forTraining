@@ -1,4 +1,4 @@
-package lessons.lesson14;
+package lessons.lesson14Collection;
 // c переопределеним методов
 import java.util.HashSet;
 

@@ -1,4 +1,4 @@
-package lessons.lesson15;
+package lessons.lesson15Exceptions;
 
 /**
  * //наследуемся от любого встроенного Exception из java, который контролируется (checked) средой разработки, все методы уже включены от родителя

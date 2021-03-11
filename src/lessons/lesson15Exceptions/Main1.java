@@ -1,4 +1,4 @@
-package lessons.lesson15;
+package lessons.lesson15Exceptions;
 
 public class Main1 {
     public static void main(String[] args) {
@@ -17,8 +17,10 @@ public class Main1 {
 //            person.setAge(-10);
 //            System.out.println("Age set successfully");
 //        }catch (IllegalArgumentException e) {
-//            System.out.println("Wronge age"); // сообщение для пользователя, в чем именно ошибка и нужно исправить
+//            System.out.println("Wrong age"); // сообщение для пользователя, в чем именно ошибка и нужно исправить
 //        }
 //        System.out.println("Try again"); //сообщение о том, что программа отработала и продолжает работать, ждет корректного ввода от п ользователя
     }
+
+
 }

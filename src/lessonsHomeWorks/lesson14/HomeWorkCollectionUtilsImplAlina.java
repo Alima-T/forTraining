@@ -1,7 +1,7 @@
 package lessonsHomeWorks.lesson14;
 
 
-import lessons.lesson14.CollectionUtils;
+import lessons.lesson14Collection.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;

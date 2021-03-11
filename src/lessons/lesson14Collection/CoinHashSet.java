@@ -1,4 +1,4 @@
-package lessons.lesson14;
+package lessons.lesson14Collection;
 
 public class CoinHashSet {
     private int year;

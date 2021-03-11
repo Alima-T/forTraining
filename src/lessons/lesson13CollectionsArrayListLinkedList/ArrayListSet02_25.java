@@ -1,4 +1,4 @@
-package lessons.lesson13;
+package lessons.lesson13CollectionsArrayListLinkedList;
 
 import java.util.ArrayList;
 import java.util.Iterator;
