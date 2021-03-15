@@ -1,5 +1,6 @@
 package lessons.lesson15Exceptions;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,18 +36,13 @@ public class StringUtilsImpl implements StringUtils {
 
     @Override
     public int[] findWord(String text, String word) throws NullPointerException {
-        String regex = "[a-z][A-Z][а-я][А-Я]"; // (^.*[^A-zА-яЁё].*$") из гугла
-        Pattern p = Pattern.compile(regex);
+        //String regex = "[a-z][A-Z][а-я][А-Я]"; // (^.*[^A-zА-яЁё].*$") из гугла
+        Pattern p = Pattern.compile(word);
         Matcher m = p.matcher(text);
-        String[] parts = text.split(" ");
-        for (int i = 0; i < parts.length; i++) {
-            if (parts[i].equals(word)) {
-                System.out.println(i);
-            }
-
-        }
         if (!m.find()) {
             throw new NullPointerException("There are no words"); // не знаю куда поставить, отрабатывает в любом случае
+        }
+        while (m.find()) {
         }
         return new int[0];
     }
@@ -54,16 +50,22 @@ public class StringUtilsImpl implements StringUtils {
 
     @Override
     public double[] findNumbers(String text) throws CustomException {
-        String regex = "\\d+\\.\\d+"; // ("[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?") из гугла
+        String regex = "[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?"; // из гугла
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(text);
+
+        ArrayList<Double> doubles = new ArrayList<>();
         while (m.find()) {
-            System.out.println(m.group());
+            doubles.add(Double.parseDouble(m.group()));
         }
         if (!m.find()) {
             throw new CustomException("Not found"); // не знаю куда поставить, отрабатывает в любом случае
         }
-        return new double[0];
+        double[] result = new double[doubles.size()];
+        for (int i = 0; i < doubles.size(); i++) {
+            result[i] = doubles.get(i);
+        }
+        return result;
     }
 
     // TESTING

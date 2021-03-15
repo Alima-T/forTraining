@@ -1,10 +1,9 @@
 package lessons.lesson14Collection;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
-public class Main2 {
+public class MapClass {
     public static void main(String[] args) {
         HashMap<String, Integer> fridge = new HashMap<>();
         fridge.put("Grusha", 2);
@@ -19,8 +18,8 @@ public class Main2 {
             weight = weight + value;
         }
 
-        Set<Map.Entry<String, Integer>> entries = fridge.entrySet();
-        for (Map.Entry<String, Integer> entry : entries) {
+        Set<java.util.Map.Entry<String, Integer>> entries = fridge.entrySet();
+        for (java.util.Map.Entry<String, Integer> entry : entries) {
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
 

@@ -6,6 +6,9 @@ public class BlackJackGame_Polymorphism {
     private ArrayList<Player> players = new ArrayList<>();
     private Deck deck = new Deck();
 
+    protected String winText = "You win! :)";
+    protected String loseText = "You lose... :(";
+
     public void addPlayer(Player player) {
         players.add(player);
 
@@ -33,21 +36,38 @@ public class BlackJackGame_Polymorphism {
         }
     }
 
-    //   public int getPlayersStatus(int sum){
-//        players[i].get
-//    }
-//    public String GameOver () {
-//        players.g
-//        int sum = 0;
-//        for (Card card : ) {
-//            sum = sum + card.getValue(); // card.getValue() - значение вновь полученной карты
-//        }
-//        if (sum == 21) {
-//            return "Winner";
-//        } else {
-//            return "Loser";
-//       }
+    public void printWinner(){
+        for (Player p: players){
+            if (p.totalHandValue()>21){
+                p.setWinner(false);
+            }
+        }
+        int winnerValue = this.maxHandsValue();
+        for(Player p: players){
+            if(p.totalHandValue() == winnerValue) {
+                System.out.println((winText));
+                p.printHand();
+                System.out.println(".............");
+            }else {
+                System.out.println(loseText);
+                p.printHand();
+                System.out.println(".............");
+            }
+        }
+    }
 
+private int maxHandsValue(){
+        //19
+    //
+
+    //25 false
+        int maxHandsValue = 0;
+        for(Player p: players){
+            if (p.totalHandValue()>maxHandsValue&&p.isWinner()) { // p.isWinner() - он в игре?, если не false , то в игре
+                maxHandsValue= p.totalHandValue();
+            }
+        }return maxHandsValue;
+}
 }
 
 

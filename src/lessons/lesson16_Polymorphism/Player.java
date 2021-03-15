@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Player {
     protected ArrayList<Card> hand = new ArrayList<>(); //модификатор доступа protected, чтобы был доступ для наследников, а именно Dealer
-    protected String winText = "You win! :)";
-    protected String loseText = "You lose... :(";
+    private boolean isWinner = true;
+
+
 
 
     public void addCardToHand(Card card) {
@@ -30,28 +31,36 @@ public class Player {
         return answer;
     }
 
-    private int face;
+//    private int face;
+//
+//    public int getFace() {
+//        this.face = face;
+//        return face;
+//    }
 
-    public int getFace() {
-        this.face = face;
-        return face;
-    }
 
-
-    public int getHandSum() {
-        int handSum = 0; //сумма очков в картах
+    public int totalHandValue() {
+        int total = 0; //сумма очков в картах
         for (Card card : hand) { //все переменные из Player доступны в дочернем классе
-            handSum = handSum + card.getValue(); // card.getValue() - значение вновь полученной карты
+            total = total + card.getValue(); // card.getValue() - значение вновь полученной карты
         }
-        return handSum;
+        return total;
+    }
+//
+////        if (sum == 21) {
+////            return "Winner";
+////        } else if (sum > 21) {
+////            return "Loser";
+////        } else return sum;
 
-//        if (sum == 21) {
-//            return "Winner";
-//        } else if (sum > 21) {
-//            return "Loser";
-//        } else return sum;
+
+    public boolean isWinner() {
+        return isWinner;
     }
 
+    public void setWinner(boolean winner) {
+        isWinner = winner;
+    }
 }
 
 

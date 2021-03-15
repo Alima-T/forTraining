@@ -15,8 +15,9 @@ public class Main {
         game.doFirstRound();
         game.doSecondRound();
 
-        System.out.println();
+        game.printWinner();
 
+        // для внешнего интерфейса javaFX/ java swing - устаревшая уже библиотека, открывается через комп. а не через android или ios
 
     }
 }

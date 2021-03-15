@@ -14,8 +14,4 @@ public class Dealer extends Player {
         }
     }
 
-    @Override
-    public int getHandSum() {
-        return super.getHandSum();
-    }
 }
