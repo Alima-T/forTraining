@@ -28,6 +28,7 @@ public class ArrayList02_25 {
 
         LinkedList<String> linkedList = new LinkedList<>(); //Все методы, кроме get отрабатывают бустрее чем в ArrayList
         System.out.println(texts.get(0)); // очень долго, т.к поиск отрабатывает всегда делением на 2. Разница колоссальная.
+        System.out.println(texts.iterator());
     }
 
 }

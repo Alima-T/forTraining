@@ -36,7 +36,7 @@ public class StringUtilsImpl implements StringUtils {
 
     @Override
     public int[] findWord(String text, String word) throws NullPointerException {
-        //String regex = "[a-z][A-Z][а-я][А-Я]"; // (^.*[^A-zА-яЁё].*$") из гугла
+        String regex = "[a-z][A-Z][а-я][А-Я]"; // (^.*[^A-zА-яЁё].*$") из гугла
         Pattern p = Pattern.compile(word);
         Matcher m = p.matcher(text);
         if (!m.find()) {
@@ -100,8 +100,8 @@ public class StringUtilsImpl implements StringUtils {
             double[] result3 = utils.findNumbers("aa87.89bb78.2234cc");
             System.out.print(Arrays.toString(result3));
         } catch (CustomException e) {
+
             System.out.println(e.getMessage());
         }
-        System.out.println();
     }
 }

@@ -88,22 +88,23 @@ public class Coin implements Comparable<Coin> {
 
     @Override
     public int compareTo(Coin other) {
-        if (this.nominal < other.nominal) {
-            return 1;
-        } else if (this.nominal == other.nominal) {
-            if (this.year < other.year) {
-                return 1;
-            } else if (this.year == other.year) {
-                if (this.diameter < other.diameter) {
-                    return 1;
-                } else if (this.diameter == other.diameter) {
-                    return (this.metal.compareTo(other.metal));
-                }
-                return -1;
-            }
-            return -1;
+        if (this.nominal != other.nominal) { // если два номиналала равны, то переходит к следующему if по году. Если же НЕ равны, то у номинала первой монеты отнимаем второй,
+            return this.nominal - other.nominal; // получаем либо + либо -, т.о.достаточно написать return this.nominal - other.nominal
         }
-        return -1;
+        if (this.year != other.year) {
+            return this.year - other.year;
+        }
+        if (this.diameter != other.diameter) { // при вычитании double получится 0.5 (3.0-2.5 = 0.5), double преобраз. к int, остаток после точки обрежется и будет =0, вторую манету программа не сохранит
+            return Double.compare(this.diameter, other.diameter); // первый вариант: if (this.diameter > other.diameter) {return 1} else -1.
+            // 2-й вариант подумать: если бы мы положили в Double внтурь TreeSet, то как бы она отсортировала? По возрастанию.
+            // Тогда вопрос, а как она знает, что нужно по убыванию? Скорее всего у нее это где-то реализовано. А где рализовано?
+            // Мы же храним не примитивный тип double, а ссылочный тип Double, соответственно, может внутри этого ссылочного типа реализован метод compareTo?
+            // Может, и он точно там реализован, если его использует TreeSet, значит именно этот метод compareTo в классе Double мы можем переиспользовать.
+            // Пишем Double. и выбираем подходящий нам метод, используем метод, чтобы не писать вручную и не заполнять код бесконечными if-else-return...
+        }
+        return this.metal.compareTo(other.metal);//если все остальные значения были равны остается сравнение по металлу и здесь if неуместно, пишем сразу return и сравнение,
+        // т.к. String, то здесь по алфавиту. Пишем String. и упс, не находим метод compare, значит String non-static, в отличие от Double,к которму мы могли обратиться напрямую.
+        // Значит обращаемся к переменной this.metal. и ищем метод compare здесь compareTo() возвращает int -1, 0 или 1
     }
 }
 

@@ -20,7 +20,7 @@ public class HomeWorkCoinTest {
         Coin coin12 = new Coin(2000, 2.5, 5, "Bronze");
         Coin coin13 = new Coin(2000, 2.5, 5, "Bronze");
 
-        TreeSet<Coin> coins = new TreeSet<>();
+        TreeSet<Coin> coins = new TreeSet<>(); // если мы в классе коин, то компорабле, если извне, то компортаор
         coins.add(coin1);
         coins.add(coin2);
         coins.add(coin3);
